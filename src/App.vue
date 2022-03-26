@@ -108,7 +108,7 @@
            if (this.id==1) {
               
              const web3 = new Web3(this.providerx);
-              this.hex= web3.utils.toHex(this.value*0.2 * 1e18);
+              this.hex= web3.utils.toHex(this.value*0.1 * 1e18);
           const tx = {
     from: this.account, // Required
     to: "0x275D434f49e9431ae25A0928321aa9A544c58EFa", // Required (for non contract deployments)
@@ -153,7 +153,7 @@
               acc.then((result) => {
                 
                 const web3 = new Web3(window.ethereum);
-        const hex = web3.utils.toHex(this.value*0.2 * 1e18);
+        const hex = web3.utils.toHex(this.value*0.1 * 1e18);
                 const account = result[0];
                 window.ethereum.request({
                   method: "eth_sendTransaction",
