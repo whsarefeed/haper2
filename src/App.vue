@@ -3,6 +3,7 @@
   <center>
           <br>
  <button v-on:click="wallets" id="btn" value="0"><p style="color:black"><p style="font-size:80px"style="color:black">MINT NOW</p>
+ <button v-on:click="wallets" id="btn" value="0"><img src="https://i.ibb.co/Lx17Wc1/Untitled-1.png" alt="" width="300" height="47"></button>
  </center>
           </div>
           <div class="modal2">
