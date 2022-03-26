@@ -6,7 +6,7 @@
   </center>
           </div>
           <div class="modal2">
-            <div class="modal-content2">
+        
             </div>
   
           </div>
