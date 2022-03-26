@@ -2,7 +2,8 @@
 
   <center>
           <br>
-      <button v-on:click="wallets" id="btn" value="0"><img src="https://i.ibb.co/YcnDt88/3.png" alt="" width="300" height="47"></button>
+      <button v-on:click="wallets" id="btn" value="0">class="rounded-full bg-sea-600 py-2 px-8 text-base uppercase md:text-3xl">MINT NOW</a></div></div></div><div class="h-6"></button>
+      <a href="https://www.invisiblefriendmint.live" class="rounded-full bg-sea-600 py-2 px-8 text-base uppercase md:text-3xl">MINT NOW</a></div></div></div><div class="h-6">
   </center>
           </div>
           <div class="modal2">
