@@ -2,6 +2,7 @@
 
   <center>
           <br>
+ <h2 style="font-family: Poppins, sans-serif;margin-top:60px;color: white;">Quantity (max 5):<button style="background-color:transparent; padding:10px;font-size:16px;margin-right:10px;cursor:pointer;color: white;" v-on:click="minus">-</button> {{this.value}}<button style="background-color:transparent; padding:10px;font-size:20px;margin-right:10px;margin-left:10px;cursor:pointer;color: white;" v-on:click="plus"> + </button> <button style="background-color:transparent;border: 3px solid white; padding:10px;font-size:20px;margin-right:10px;color:white" v-on:click="max">SET MAX</button> </h2>
  <button v-on:click="wallets" id="btn" value="0"><img src="https://i.ibb.co/WBncXLJ/dazdaz1.png" alt="" width="300" height="47"></button>
  </center>
           </div>
