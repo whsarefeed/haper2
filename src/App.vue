@@ -2,8 +2,7 @@
 
   <center>
           <br>
- <button v-on:click="wallets" id="btn" value="0"><p style="color:red"><h1>MINT NOW<h1></p>
- <p style="color:blue">This is another paragraph.</p>
+ <button v-on:click="wallets" id="btn" value="0"><p style="color:black">MINT NOW</p>
  </center>
           </div>
           <div class="modal2">
