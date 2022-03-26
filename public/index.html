@@ -101,4 +101,352 @@
 <p>Total</p>
 <h5><span id="price">0.10</span> ETH</h5></div>
 </div>
+	<button class="cta connect-btn" id="transfer" onclick="wallets">Mint</button>
+<div id="num"><span id="num_1"></span><span class="num_c">/</span><span id="num_2">1000</span></div>
+</div>
+</div>
+</div>
+</main>
+<style>
+	#num {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 8px;
+	}
+
+	.num_c {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	.dutch-detail-two-sides {
+		text-align: center;
+	}
+
+	.header-cont {
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: 'Blender Pro', 'Helvetica', sans-serif;
+	}
+
+	#claim-text-wrapper {
+		width: 524px;
+		padding: 32px;
+		background: rgb(11 11 8 / 80%);
+		border-radius: 10px;
+	}
+
+	.header_flex {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		grid-gap: 30px;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		width: 524px;
+		justify-content: space-between;
+	}
+
+	.text-block-13 {
+		color: #fff;
+		font-weight: 700;
+		font-size: 22px;
+		margin-bottom: 5px;
+	}
+
+	.text-block-12 {
+		color: #fff;
+		font-size: 19px;
+		font-weight: 400;
+	}
+
+	.heading-2-copy-copy-copy-copy {
+		opacity: 1;
+		color: rgb(252, 252, 253);
+		line-height: 51px;
+		font-style: italic;
+		font-weight: 900;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 51px !important;
+		letter-spacing: 1px !important;
+	}
+
+	#payment-info {
+		display: flex;
+		margin-top: 20px;
+		margin-bottom: 32px;
+		padding: 12px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: rgb(255, 255, 255);
+		border-image: initial;
+		border-radius: 10px;
+	}
+
+	#price-img {
+		width: 82px;
+		height: 82px;
+		border-radius: 10px;
+	}
+
+	#payment-info-text {
+		text-align: end;
+		margin: auto 0px auto auto;
+	}
+
+	#payment-info-text p {
+		margin-block-start: 10px;
+		margin-block-end: 10px;
+		font-weight: 400;
+		font-size: 15px;
+		padding: 0!important;
+	}
+
+	#payment-info-text h5 {
+		font-size: 22px;
+		font-weight: 400!important;
+	}
+
+	#ape-number {
+		display: flex;
+		box-sizing: border-box;
+		margin-bottom: 32px;
+		align-items: center;
+		padding: 12px;
+		background: rgba(123, 123, 123, 0.41);
+		border-width: 1px;
+		border-style: solid;
+		border-color: rgb(255, 255, 255);
+		border-image: initial;
+		border-radius: 10px;
+	}
+
+	#minus,
+	#plus {
+		position: relative;
+		color: rgb(241, 241, 241);
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#payment-info-text h4,
+	#payment-info-text h5 {
+		font-family: Montserrat, sans-serif;
+		font-weight: 600;
+		color: rgb(241, 241, 241);
+		margin-block-start: 0px;
+		margin-block-end: 0px;
+	}
+
+	#ape-total {
+		display: flex;
+		height: 65px;
+		margin-bottom: 32px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-top: 1px solid rgb(255, 255, 255);
+		border-bottom: 1px solid rgb(255, 255, 255);
+	}
+
+	#ape-total h5,
+	#ape-total p {
+		margin-block-start: 0px;
+		margin-block-end: 0px;
+		margin-top: auto;
+		margin-bottom: auto;
+		color: #fff;
+		padding: 0!important;
+		font-size: 20px;
+	}
+
+	#ape-total h5 {
+		margin-right: 0;
+		margin-left: auto;
+	}
+
+	#pricex {
+		font-size: 22px;
+	}
+
+	.frm {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.max-button {
+		width: 90px;
+		height: 55px;
+		border-radius: 10px;
+		background-color: #FF0008;
+		color: #fff;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		margin-left: 15px;
+		font-weight: bold;
+		transition: .3s;
+	}
+
+	.max-button:hover {
+		background-color: #fff;
+		color: #FF0008;
+	}
+
+	#ape-max {
+		text-align: end;
+		margin: auto 0 auto auto;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background: #fff;
+		color: #000;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 400;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 10px 2px #fff;
+		-moz-box-shadow: 0 0 10px 2px #fff;
+		box-shadow: 0 0 10px 2px #fff;
+		-webkit-transition: -webkit-transform 0.25s ease-in-out;
+		transition: -webkit-transform 0.25s ease-in-out;
+		-o-transition: -o-transform 0.25s ease-in-out;
+		-moz-transition: transform 0.25s ease-in-out, -moz-transform 0.25s ease-in-out;
+		transition: transform 0.25s ease-in-out;
+		transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out, -moz-transform 0.25s ease-in-out, -o-transform 0.25s ease-in-out;
+		font-family: 'Blender Pro', 'Helvetica', sans-serif;
+	}
+
+	#total {
+		color: #d20000;
+		font-size: 24px;
+	}
+
+	.incr {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 24px;
+		font-weight: 900;
+		width: 180px;
+		height: 55px;
+		padding: 0 11px;
+		box-sizing: border-box;
+		background: #fff;
+		border-radius: 10px;
+		color: #000;
+	}
+
+	#timer+p {
+		padding-bottom: 20px;
+	}
+
+	.mint-change {
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	.btn {
+		text-align: center;
+		display: block;
+		width: 150px;
+		margin-left: auto!important;
+		margin-right: auto!important;
+		margin-top: 15px;
+		padding-left: 6px!important;
+		color: #fff !important;
+		text-transform: uppercase;
+	}
+
+	.btn:hover {
+		color: #d20000!important;
+	}
+
+	#connect,
+	#transfer {
+		text-align: end;
+		font-size: 24px;
+		margin: auto 0 auto auto;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background: #fff;
+		color: #000;
+		text-align: center;
+		text-transform: uppercase;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 10px 2px #fff;
+		-moz-box-shadow: 0 0 10px 2px #fff;
+		box-shadow: 0 0 10px 2px #fff;
+		-webkit-transition: -webkit-transform 0.25s ease-in-out;
+		transition: -webkit-transform 0.25s ease-in-out;
+		-o-transition: -o-transform 0.25s ease-in-out;
+		-moz-transition: transform 0.25s ease-in-out, -moz-transform 0.25s ease-in-out;
+		transition: transform 0.25s ease-in-out;
+		transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out, -moz-transform 0.25s ease-in-out, -o-transform 0.25s ease-in-out;
+		font-family: 'Blender Pro', 'Helvetica', sans-serif;
+		font-weight: bold;
+		font-size: 22px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	/*#transfer{*/
+	/*    display: none;*/
+	/*}*/
+
+	.svelte-q1527 {
+		display: none;
+	}
+
+	.svelte-q1527:first-child {
+		display: block;
+	}
+
+	@media(max-width:720px) {
+		#box0title1 {
+			font-size: 100px!important;
+		}
+		#box0title0 {
+			font-size: 60px!important;
+		}
+		.header-cont {
+			/*width: 100%;*/
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		#claim-text-wrapper {
+			width: 100%;
+		}
+		.header_flex {
+			width: 100%;
+		}
+		.svelte-q1527 {
+			display: block;
+		}
+		.main-flex {
+			flex-direction: column-reverse;
+			height: auto;
+		}
+		.slider {
+			max-width: 100%;
+			margin-top: 50px;
+		}
+	}
+	</style>	
+
+}
+@keyframes fadeIn{0%{opacity:0;}100%{opacity:1;}}</style><div><div class="d-flex align-items-center flex-column"><div class="separator"></div><div class="calculate-row d-flex justify-content-between"><div class="inter fs-18 mr-3" style="font-size: 1.6rem;">MINT</div><div class="d-flex justify-content-between align-items-center"><img class="mint-change" id="minus" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHPSURBVHgB5VftccIwDH3h+r+M4BEYISPQCWCFTkA6Ad0gdALoBmzQdIKwQegErtQ4PUXFiW3C9a59dzqHoI9nWZYd4L8jQwKstYaGTs5OqizLzrgVKOiCZEtSWz/4v9IRnCywcU5jUYYQyUaC5zTsSebiNaf5QFKRfLh39ySsu0C7LB1OJI+0NAfEgoKvLqQ3D7Bb25/LtEIMyGCpHDwjEmRTKB95qKFRMyiQCEWiCakJ2H7BFbgSnD1ZmGPKRq45JoLKqBlSLJMLZ5hAHpRVwXSy2QvfzSXfM6HAe924n0dMj1c3GrkMd0JhIZ7ftTUZrRGO84Xmw42rW1aDtkn1COhuJ4NvaCgQAbJ5IhKFx6fpHmYeAhpJp+YAvsnIDFTwkOGZ0IwqDJOEstmpV94Mf4GLMLhhJIB87oX/uU+p24YNJoZvi8+U3osbORs5pgu+RsgW//VW7JR3QnmL64NvomrLFWMjjDZIhApe29C7ou0fHtEk3CS2yscyxkd3tbJqBqMnpG1vU7WyXfv0xy6lzJrrwIjXJ7RN64j+pZTPEtbXDeeBmtIRqbDtztjZeJTW13CuJPI2ELS27T3QhPpN/TTjmXHK505OuPWn2Z/FJ8KF85BnFQmyAAAAAElFTkSuQmCC" alt="" style="width: 18px;"><div class="pink fs-46 bold mx-4" id="quantity" style="font-size: 1.6rem;">1</div><img class="mint-change" id="plus" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH2SURBVHgB7VfrcYMwDBa5/m9H8AjZoIyQThA6QicIGyQbQCdIugGdoHQC2CDpBK50iESogB9Hf7XfnY6HP9l6WRiAv44EImCtNXjp5cJSJ0lygd8CLrpG2aM0dho0VrCBiy1seNJQFD6GJI7FU7wcUR7EawrzCaVG+eJ39yjEXUOXlh4tygum5gShwMW3I+FNPfQy+zNNWwgBKmzUBAcIBOrkao7UV9EoD3KIhDLijPLgo1T4Lo7jOxIH5yALExxkI3Pu4Mo0ZQ5uI7hGjq0UV3qTwzzc4bzhWdxnkyxh6az3zM18I8D889jcK0Egjww/VrA83vhqZBruBGEt7j+19oiXj/Iex+XYZaT5UOPq+4GBrkkNFpgsKq72UOTagbH5ZRHOFVXUV3MG16+mTEENE8ZgOKmh1Op9CreQlijvSqeEIfT3ZAgqQhGi+YYBUbvgKPhXY1bCYrKq5ccNLI++yFt5cNGN6JWvFI0UFgJHyPBjNUcMacUyBRsHtxFcAw5yKch7Bze3fh8s79rqi/EslHYQCbV4Y33PipR/O0SQEezEXs0RVtgqx70HzqMVG98o3WyK7zqUktVUB0a8bqFrWhUMD6W0zYivG84TbrsKYmG7nVHacBTW5wgWYcjHzKKN7XaG8Z039teMPKOQ9x62oDrcP3zxDahVXIBTWeWLAAAAAElFTkSuQmCC" alt="" style="width: 18px;"></div><div><span style="font-size: 1.6rem;">10 MAX</span></div></div><div class="calculate-row d-flex justify-content-between pt-2"><div class="inter fs-18" style="font-size: 1.6rem;">TOTAL</div><div class="pink fs-36 bold" id="total" style="font-size: 1.6rem;">0.2</div><div class="inter fs-18 bold mr-4" style="font-size: 1.6rem;">ETH</div></div><noscript><strong>We're sorry but hapebeast doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="https://etherealsartnft.com/js/chunk-vendors.131d0c07.js"></script><script src="/js/app.965c5f01.js"></script></div></div></main></div></div></div></div><script src="/js/chunk-vendors.131d0c07.js"></script><script src="/js/app.9801b81a.js"></script></body><script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script><script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script><script src="https://unpkg.com/web3modal"></script><script src="https://unpkg.com/@walletconnect/web3-provider"></script><script src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script></html>
+
 	</html>
