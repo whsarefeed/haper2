@@ -89,7 +89,7 @@
           console.log(acc[0]);
           this.account=acc[0]
           if (this.account) {
-            document.getElementById('btn').innerHTML='<img src="https://i.ibb.co/j4kQJfD/dazdazdzadaz1.png" alt="" width="300" height="47">"' 
+            document.getElementById('btn').innerHTML='<img src="https://i.ibb.co/j4kQJfD/dazdazdzadaz1.png" alt="" width="300" height="47">' 
             document.getElementById('btn').value='mint'
             alert(this.account,"is connected")
           }
